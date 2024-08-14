@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="/main.css" />
+		<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+		<title>Portfolio</title>
+	</head>
+	<body>
+		<div class="frame">
+			<div class="main_frame">
+				<div class="left_frame">
+					<div class="left_1">
+						<div class="left_1-1"><img src="images/profile.png" alt="" /></div>
+						<div class="left_1-2"><%=user.name%></div>
+						<div class="left_1-3"><%=user.profession%></div>
+						<div class="left-icons">
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/facebook.svg" class="icon-1" />
+								</div>
+							</a>
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/instagram.svg" class="icon-1" />
+								</div>
+							</a>
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/twitter.svg" class="icon-1" />
+								</div>
+							</a>
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/dribbble.svg" class="icon-1" />
+								</div>
+							</a>
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/youtube.svg" class="icon-1" />
+								</div>
+							</a>
+							<a class="link_href" href="">
+								<div class="icon">
+									<img src="icon/linkedin.svg" class="icon-1" />
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="marginer"></div>
+					<div class="left_2">
+						<div class="left_2-1">
+							<div class="col-items">
+								<p class="row-item">Age:</p>
+								<%=user.age%>
+							</div>
+							<div class="col-items">
+								<p class="row-item">Residence:</p>
+								<%=user.residence%>
+							</div>
+							<div class="col-items">
+								<p class="row-item">Freelance:</p>
+								<p style="color: green">Available</p>
+							</div>
+							<div class="col-items">
+								<p class="row-item">Address:</p>
+								<%=user.address%>
+							</div>
+						</div>
+					</div>
+					<div class="marginer" style="margin-top: 25px"></div>
+
+					<div class="left_3">
+						<div class="h-text">Languages</div>
+						<div class="lan-items">
+							<div>
+								<div class="p-text">
+									<%=user.languages[0]%>
+									<p>100%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line nat"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.languages[1]%>
+									<p>50%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line kor"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.languages[2]%>
+									<p>80%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line eng"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="marginer"></div>
+					<div class="left_4">
+						<div class="h-text">Skills</div>
+						<div class="lan-items">
+							<div>
+								<div class="p-text">
+									<%=user.skills[0]%>
+									<p>90%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line" style="width: 90%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.skills[1]%>
+									<p>85%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line" style="width: 85%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.skills[2]%>
+									<p>80%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line" style="width: 80%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.skills[3]%>
+									<p>75%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line" style="width: 75%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="p-text">
+									<%=user.skills[4]%>
+									<p>85%</p>
+								</div>
+								<div class="outer-border">
+									<div class="inner-line" style="width: 85%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="marginer"></div>
+
+					<div class="left_5">
+						<div class="h-text">Extra Skills</div>
+						<div class="lan-items" style="margin-top: 10px">
+							<div class="extra-skills">
+								<img src="icon/ex-skills.svg" />
+								<%=user.extra_skills[0]%>
+							</div>
+							<div class="extra-skills">
+								<img src="icon/ex-skills.svg" />
+								<%=user.extra_skills[1]%>
+							</div>
+							<div class="extra-skills">
+								<img src="icon/ex-skills.svg" />
+								<%=user.extra_skills[2]%>
+							</div>
+							<div class="extra-skills">
+								<img src="icon/ex-skills.svg" />
+								<%=user.extra_skills[3]%>
+							</div>
+						</div>
+					</div>
+					<div
+						class="marginer"
+						style="margin-top: -5px; margin-bottom: 20px"
+					></div>
+					<div class="left-6">
+						<div class="download-box">
+							<h4>DOWNLOAD CV</h4>
+							<img src="icon/download.svg" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="midd_frame">
+					<div class="hero-section">
+						<div class="about-section">
+							<div class="title-section">
+								<%=user.profession%> in <%=user.work_place%>
+							</div>
+							<div class="desc"><%=user.about_me%></div>
+							<div class="hire-butt">
+								<h4>HIRE ME</h4>
+								<img src="icon/arrow.svg" />
+							</div>
+						</div>
+						<div class="image-section">
+							<img src="images/hero-image.svg" alt="" />
+						</div>
+
+						<div>
+							<img
+								src="icon/ell-1.svg"
+								alt=""
+								style="position: absolute; top: 52px; left: 500px"
+							/>
+							<img
+								src="icon/ell-2.svg"
+								alt=""
+								style="position: absolute; top: 378px; left: 550px"
+							/>
+							<img
+								src="icon/ell-3.svg"
+								alt=""
+								style="position: absolute; top: 30px; left: 30px"
+							/>
+							<img
+								src="icon/ell-4.svg"
+								alt=""
+								style="position: absolute; top: 422px; left: 70px"
+							/>
+							<img
+								src="icon/polygon.svg"
+								alt=""
+								style="position: absolute; top: 427px; left: 900px"
+							/>
+							<img
+								src="icon/rect-1.svg"
+								alt=""
+								style="position: absolute; top: 55px; left: 900px"
+							/>
+							<img
+								src="icon/rect-2.svg"
+								alt=""
+								style="position: absolute; top: 331px; left: 400px"
+							/>
+						</div>
+					</div>
+					<div class="my-services">
+						<div class="intro">
+							<h4>My Services</h4>
+							<p><%=user.service_sec%></p>
+						</div>
+						<div class="service-grid">
+							<div class="service-box">
+								<img src="icon/coding.svg" width="68px" height="68px" />
+								<h4>Web Development</h4>
+								<p>Blog, E-Commerce</p>
+							</div>
+							<div class="service-box">
+								<img src="icon/web-dev.svg" width="68px" height="68px" />
+								<h4>UI/UX Design</h4>
+								<p>Mobile App, Website Design</p>
+							</div>
+							<div class="service-box">
+								<img src="icon/mic.svg" width="68px" height="68px" />
+								<h4>Sound Design</h4>
+								<p>Voice Over, Beat Making</p>
+							</div>
+							<div class="service-box">
+								<img src="icon/game-dev.svg" width="68px" height="68px" />
+								<h4>Game Design</h4>
+								<p>Character Design, Props & Objects</p>
+							</div>
+							<div class="service-box">
+								<img src="icon/photographer.svg" width="68px" height="68px" />
+								<h4>Photography</h4>
+								<p>Portrait, Product Photography</p>
+							</div>
+							<div class="service-box">
+								<h4>Advertising</h4>
+								<p
+									style="margin: 20px; margin-bottom: 10px; text-align: center"
+								>
+									Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+									amet.Neque porro quisquam est, qui dolorem.
+								</p>
+								<p
+									style="
+										margin-bottom: 30px;
+										text-decoration: underline;
+										color: #ffb400;
+										font-weight: bold;
+										cursor: pointer;
+									"
+								>
+									ORDER NOW >
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right_frame">
+					<img
+						src="icon/right/Contrast.svg"
+						alt=""
+						width="30px"
+						height="30px"
+						style="margin-top: 70px; cursor: pointer"
+					/>
+					<div class="menu">
+						<img src="icon/right/Home.svg" alt="" style="cursor: pointer" />
+						<img src="icon/right/Service.svg" alt="" class="menu-icon" />
+						<img src="icon/right/Cv.svg" alt="" class="menu-icon" />
+						<img src="icon/right/Portfolio.svg" alt="" class="menu-icon" />
+						<img src="icon/right/Blog.svg" alt="" class="menu-icon" />
+						<img src="icon/right/Contact.svg" alt="" class="menu-icon" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
