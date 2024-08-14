@@ -18,6 +18,15 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4: Routing
+
+// app.get("/hello", function (req, res) {
+// 	res.end("<h1>Hello World</h1>");
+// });
+
+// app.get("/gift", function (req, res) {
+// 	res.end("<h1>Siz sovgalar bolimidasiz</h1>");
+// });
+
 app.get("/", function (req, res) {
 	res.render("harid");
 });
