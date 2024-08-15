@@ -550,7 +550,7 @@
 
 .menu-item:hover .tooltip-text {
 	display: block;
-	right: -30%;
+	right: -35%;
 }
 
 .menu-item .tooltip-text::after {
