@@ -238,19 +238,19 @@
 	border: 0.5px solid #ffb400;
 	border-radius: 5px;
 	width: 220px;
-	height: 4px;
+	height: 5px;
 
 	display: flex;
 	align-items: center;
 
-	margin-top: -10px;
+	margin-top: -11px;
 }
 
 .inner-line {
 	border: none;
 	border-radius: 5px;
-	height: 2px;
-	margin-right: 1px;
+	height: 3px;
+	margin-right: 2px;
 	margin-left: 1px;
 
 	background-color: #ffb400;
@@ -260,7 +260,7 @@
 	width: 100%;
 }
 .kor {
-	width: 50%;
+	width: 70%;
 }
 .eng {
 	width: 80%;
@@ -269,7 +269,7 @@
 .main_frame .left_frame .left_4 {
 	position: relative;
 	width: 220px;
-	height: 252px;
+	height: 253px;
 	margin-top: 25px;
 	margin-left: 45px;
 }
