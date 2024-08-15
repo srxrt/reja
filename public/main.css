@@ -132,6 +132,10 @@
 	justify-content: center;
 	align-items: center;
 }
+.icon:hover {
+	background: #ffdd8e;
+	scale: 120%;
+}
 /*
 .icon-1 {
 	position: relative;
@@ -315,6 +319,10 @@
 	justify-content: center;
 	gap: 10px;
 }
+.download-box:hover {
+	background-color: #ffdd8e;
+	scale: 105%;
+}
 
 .midd_frame .hero-section {
 	width: 970px;
@@ -367,6 +375,10 @@
 	justify-content: center;
 
 	cursor: pointer;
+}
+.hire-butt:hover {
+	background-color: #ffdd8e;
+	scale: 105%;
 }
 .hire-butt h4 {
 	font-family: sans-serif;
@@ -456,6 +468,18 @@
 	color: #767676;
 }
 
+.service-box .order-button {
+	margin-bottom: 30px;
+	text-decoration: underline;
+	color: #ffb400;
+	font-weight: bold;
+	cursor: pointer;
+}
+.service-box .order-button:hover {
+	color: #ffb3008b;
+	scale: 105%;
+}
+
 .right_frame .menu {
 	position: relative;
 	width: 65px;
@@ -469,8 +493,73 @@
 	gap: 50px;
 }
 
-.menu .menu-icon {
+.contrast-icon:hover {
+	scale: 120%;
+}
+.menu-item {
 	width: 40px;
 	height: 40px;
+	display: inline-block;
 	cursor: pointer;
+	background-color: #f0f0f6;
+	border-radius: 50%;
+}
+.popup {
+	display: none;
+	color: black;
+	position: relative;
+}
+.menu-icon {
+	display: block;
+	position: relative;
+	text-align: center;
+
+	top: 25%;
+	left: 25%;
+}
+
+.menu-item:hover {
+	background-color: #ffb400;
+	border-radius: 50%;
+	scale: 110%;
+}
+
+.menu-item .tooltip-text {
+	display: none;
+	width: 65px;
+
+	background-color: #2b2b2b;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	margin: 0px;
+	padding: 7px 2px;
+
+	font-family: sans-serif;
+	font-weight: 500;
+	size: 10px;
+	line-height: 14.5px;
+
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+
+	bottom: 120%;
+	right: -500%;
+}
+
+.menu-item:hover .tooltip-text {
+	display: block;
+	right: -30%;
+}
+
+.menu-item .tooltip-text::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #2b2b2b transparent transparent transparent;
 }
