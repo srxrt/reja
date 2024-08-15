@@ -524,7 +524,7 @@
 	scale: 110%;
 }
 
-.menu-item .tooltip-text {
+.menu-item .popup {
 	display: none;
 	width: 65px;
 
@@ -547,12 +547,12 @@
 	right: -500%;
 }
 
-.menu-item:hover .tooltip-text {
+.menu-item:hover .popup {
 	display: block;
 	right: -35%;
 }
 
-.menu-item .tooltip-text::after {
+.menu-item .popup::after {
 	content: " ";
 	position: absolute;
 	top: 100%; /* At the bottom of the tooltip */
