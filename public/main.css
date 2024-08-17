@@ -136,6 +136,7 @@
 	background: #ffdd8e;
 	scale: 120%;
 }
+
 /*
 .icon-1 {
 	position: relative;
@@ -191,6 +192,7 @@
 	padding-left: 5px;
 	padding-right: 5px;
 	border: none;
+	border-radius: 2px;
 
 	font-weight: 400px;
 	font-size: 15px;
@@ -527,6 +529,7 @@
 .menu-item .popup {
 	display: none;
 	width: 65px;
+	border: none;
 
 	background-color: #2b2b2b;
 	color: #fff;
