@@ -91,6 +91,6 @@ function countLetter(a, string) {
 }
 
 console.log(
-	"countLetter('e', 'Avengers, assemble!'): ",
-	countLetter("e", "avengers assemble")
+	"countLetter('e', 'Avengers, assemble!') => ",
+	countLetter("e", "Avengers, assemble!")
 );
