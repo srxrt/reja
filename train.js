@@ -77,3 +77,20 @@ async function run() {
 }
 
 run();
+
+// A-Task 2 parametrli function, birinci parametr letter, ikkincisi string bosin.
+// letter stringda neca martta takrorlanganini return qiladigan function
+
+function countLetter(a, string) {
+	let count = 0;
+	for (let i = 0; i < string.length; i++) {
+		if (a === string.at(i)) count++;
+	}
+
+	return count;
+}
+
+console.log(
+	"countLetter('e', 'Avengers, assemble!'): ",
+	countLetter("e", "avengers assemble")
+);
