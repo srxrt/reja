@@ -38,7 +38,7 @@ app.set("view engine", "ejs");
 // });
 
 app.get("/", function (req, res) {
-	res.render("harid");
+	res.render("reja");
 });
 
 app.get("/author", (req, res) => {
@@ -52,5 +52,5 @@ app.post("/create-item", (req, res) => {
 const server = http.createServer(app);
 const PORT = 3000;
 server.listen(PORT, function () {
-	console.log("Server is listening on port:", PORT);
+	console.log("Server is listening on port:", PORT, `http://localhost:${PORT}`);
 });
