@@ -1,4 +1,6 @@
 console.log("TRAIN AREA");
+
+/*
 const list = [
 	"yaxwi talaba boling",
 	"togri boshliq tanlang va koproq xato qiling",
@@ -8,7 +10,7 @@ const list = [
 	"endi dam oling, foydasi yoq",
 ];
 
-/*
+
 
 //callback function are asynchronous
 function maslahatBering(a, callback) {
@@ -34,7 +36,7 @@ maslahatBering(65, (err, data) => {
 });
 
 console.log("Passed here 2");
-*/
+
 
 // async functions
 async function maslahatBering(a) {
@@ -65,7 +67,7 @@ maslahatBering(65)
 	});
 
 console.log("Passed here 2");
-*/
+
 
 async function run() {
 	let result = await maslahatBering(65);
@@ -94,3 +96,24 @@ console.log(
 	"countLetter('e', 'Avengers, assemble!') => ",
 	countLetter("e", "Avengers, assemble!")
 );
+
+*/
+
+//B-TASK:
+
+//Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni
+//sonini bizga return qilsin.
+//MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+function countDigits(string) {
+	let count = 0;
+	for (let i = 0; i < string.length; i++) {
+		if (Number.isFinite(+string.at(i))) {
+			count++;
+		}
+	}
+
+	return count;
+}
+
+console.log("Number of numbers:", countDigits("ad2a54y79wet0sfgb9"));
