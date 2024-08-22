@@ -16,7 +16,7 @@ mongodb.connect(
 		if (err) console.log("ERROR on connection MongoDB", err);
 		else {
 			client.s.options.dbName = "Reja";
-			console.log(client);
+
 			module.exports = client;
 			console.log("MongoDB connection succeeded");
 			const app = require("./app");

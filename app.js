@@ -31,7 +31,17 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-	res.render("reja");
+	console.log("user entered /");
+	db.collection("plans")
+		.find()
+		.toArray((err, data) => {
+			if (err) {
+				console.log(err);
+				res.end("something went wrong");
+			} else {
+				res.render("reja", { items: data });
+			}
+		});
 });
 
 app.get("/author", (req, res) => {
@@ -39,8 +49,16 @@ app.get("/author", (req, res) => {
 });
 
 app.post("/create-item", (req, res) => {
-	console.log(req.body);
-	res.json({ test: "success" });
+	console.log("user entered /create-item");
+
+	db.collection("plans").insertOne({ reja: req.body.reja }, (err, data) => {
+		if (err) {
+			console.log(err);
+			res.end("Something went wrong");
+		} else {
+			res.end("Successfully added");
+		}
+	});
 });
 
 module.exports = app;

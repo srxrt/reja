@@ -17,13 +17,13 @@
 
 			<div
 				class="jumbotron p-3 shadow-sm"
-				style="background: rgb(221, 211, 211); border-radius: 5px"
+				style="background: rgb(238, 234, 234); border-radius: 5px"
 			>
 				<form id="create-form" action="/create-item" method="POST">
 					<div class="d-flex align-items-center">
 						<input
 							id="create-field"
-							name="item"
+							name="reja"
 							autofocus
 							autocomplete="off"
 							class="form-control"
@@ -39,6 +39,31 @@
 					</div>
 				</form>
 			</div>
+			<ul id="item-list" class="list-group pb-5" style="margin-top: 20px">
+				<%items.map((item)=>{ %>
+
+				<li
+					class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+				>
+					<span class="item-text"><%=item.reja%></span>
+					<div>
+						<button
+							data-id="<%=item._id%>"
+							class="edit-me btn btn-secondary btn-sm mr-1"
+						>
+							Ozgartirish
+						</button>
+						<button
+							data-id="<%=item._id%>"
+							class="delete-me btn btn-danger btn-sm"
+						>
+							Ochirish
+						</button>
+					</div>
+				</li>
+				<%})%>
+			</ul>
+
 			<button
 				id="clean-all"
 				class="btn btn-danger"
