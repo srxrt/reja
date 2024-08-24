@@ -57,6 +57,36 @@ document.addEventListener("click", (e) => {
 	}
 
 	if (e.target.classList.contains("edit-me")) {
-		alert("siz edit-me bosdingiz");
+		let userInput = prompt(
+			"O'zgartirishni kiriting!",
+			e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+		);
+		if (userInput) {
+			axios
+				.post("/edit-item", {
+					id: e.target.getAttribute("data-id"),
+					newInput: userInput,
+				})
+				.then((response) => {
+					e.target.parentElement.parentElement.querySelector(
+						".item-text"
+					).innerHTML = userInput;
+				})
+				.catch((err) => {
+					console.log("Iltimos Qaytadan urinib koring");
+				});
+		}
 	}
+});
+
+document.getElementById("clean-all").addEventListener("click", () => {
+	axios
+		.post("/delete-all", { delete_all: true })
+		.then((res) => {
+			alert(res.data.state);
+			document.location.reload();
+		})
+		.catch((err) => {
+			console.log(err);
+		});
 });
