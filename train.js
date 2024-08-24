@@ -97,7 +97,7 @@ console.log(
 	countLetter("e", "Avengers, assemble!")
 );
 
-*/
+
 
 //B-TASK:
 
@@ -117,3 +117,21 @@ function countDigits(string) {
 }
 
 console.log("Number of numbers:", countDigits("ad2a54y79wet0sfgb9"));
+*/
+
+//C-TASK:
+
+//Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+//MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(str1, str2) {
+	if (str1.length !== str2.length) return false;
+	for (let i = 0; i < str1.length; i++) {
+		if (!str2.includes(str1.at(i))) return false;
+		if (!str1.includes(str2.at(i))) return false;
+	}
+
+	return true;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou"));
