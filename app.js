@@ -1,7 +1,7 @@
 console.log("Web serverni boshlash");
 
 const express = require("express");
-
+const mongodb = require("mongodb");
 const app = express();
 const fs = require("fs");
 
@@ -46,6 +46,17 @@ app.get("/", function (req, res) {
 
 app.get("/author", (req, res) => {
 	res.render("author", { user: user });
+});
+
+app.post("/delete-item", (req, res) => {
+	const id = req.body.id;
+
+	db.collection("plans").deleteOne(
+		{ _id: new mongodb.ObjectId(id) },
+		(err, data) => {
+			res.json({ state: "success" });
+		}
+	);
 });
 
 app.post("/create-item", (req, res) => {

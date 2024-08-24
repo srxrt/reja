@@ -39,3 +39,24 @@ function itemTemplate(item) {
 					</div>
 				</li>`;
 }
+
+document.addEventListener("click", (e) => {
+	if (e.target.classList.contains("delete-me")) {
+		if (confirm("Aniq o'chirmoqchimisiz?")) {
+			axios
+				.post("/delete-item", {
+					id: e.target.getAttribute("data-id"),
+				})
+				.then((res) => {
+					e.target.parentElement.parentElement.remove();
+				})
+				.catch((err) => {
+					console.log("Iltimos qaytadan harakat qiling");
+				});
+		}
+	}
+
+	if (e.target.classList.contains("edit-me")) {
+		alert("siz edit-me bosdingiz");
+	}
+});
