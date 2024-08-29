@@ -135,7 +135,7 @@ function checkContent(str1, str2) {
 }
 
 console.log(checkContent("mitgroup", "gmtiprou"));
-*/
+
 
 // D-TASK:
 
@@ -203,3 +203,11 @@ shop.qabul("cola", 5);
 shop.qoldiq();
 shop.sotish("non", 2);
 shop.qoldiq();
+*/
+
+function getReverse(string){
+    const rev =string.split('').reverse().join('');
+    return rev;
+}
+const a = getReverse('delete');
+console.log(a);
