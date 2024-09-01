@@ -203,11 +203,27 @@ shop.qabul("cola", 5);
 shop.qoldiq();
 shop.sotish("non", 2);
 shop.qoldiq();
+
+
+function getReverse(string) {
+  const rev = string.split("").reverse().join("");
+  return rev;
+}
+const a = getReverse("reverse");
+console.log(a);
 */
 
-function getReverse(string){
-    const rev =string.split('').reverse().join('');
-    return rev;
+//Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib,
+//agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+//MASALAN: getReverse("hello") return true return qiladi
+
+function findDoublers(string) {
+	const arrStr = string.split("").sort();
+	for (let i = 0; i < arrStr.length; i++) {
+		if (arrStr[i] === arrStr[i + 1]) return true;
+	}
+
+	return false;
 }
-const a = getReverse('delete');
-console.log(a);
+
+console.log(findDoublers("hello"));
