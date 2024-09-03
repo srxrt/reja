@@ -211,7 +211,7 @@ function getReverse(string) {
 }
 const a = getReverse("reverse");
 console.log(a);
-*/
+
 
 //Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib,
 //agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
@@ -227,3 +227,25 @@ function findDoublers(string) {
 }
 
 console.log(findDoublers("hello"));
+*/
+
+//G-TASK:
+
+//Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga osha arrayning eng katta qiymatiga tegishli birinchi indexni qaytarsin.
+//MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
+
+function getHighestIndex(arr) {
+	let hIndex = 0;
+
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > arr[i + 1] && arr[i] > arr[hIndex]) {
+			hIndex = i;
+		} else if (arr[i + 1] > arr[hIndex]) {
+			hIndex = i + 1;
+		}
+	}
+
+	return hIndex;
+}
+
+console.log(getHighestIndex([5, 21, 12, 21, 8]));
